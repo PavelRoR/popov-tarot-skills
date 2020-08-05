@@ -1,0 +1,50 @@
+section#usefull
+	.container
+		img.general-img.general-img-usefull-1(src=path+"img/icons/card-king.png", alt="Карта с королем")
+		img.general-img.general-img-usefull-2(src="img/icons/sun-1.png", alt="Черное солнце")
+		.row
+			.col-md-5.col-md-push-7
+				.general-img-container.general-img-container-usefull
+					img(src=path+"img/images/usefull.png", alt="Этот мастер-класс будет полезен всем, кто:")
+			.col-md-7.col-md-pull-5
+				+gt('','Этот мастер-класс будет полезен всем, кто:')
+				hr
+				p.general-text Решил освоить систему таро
+				hr
+				p.general-text Настроен проработать проблемы, связанные с работой, карьерой, бизнесом
+				hr
+				p.general-text Хочет решить проблемы со здоровьем
+				hr
+				p.general-text Испытывает трудности в отношениях с родственниками, друзьями или любимым человеком
+				hr
+				img(src=path+"img/icons/dagger.png", alt="Кинжал").usefull-img
+		+gt('general-title-usefull','Этот мастер-класс будет полезен всем, кто:')
+		.row
+			.col-md-6
+				ul.general-list
+					li Данный мастер-класс – это демонстрация всей палитры возможностей карт таро
+				hr.hr-mobile
+			.col-md-6
+				ul.general-list
+					li Мастер поделится своими авторскими наработками, которые он кропотливо разрабатывал почти 10 лет!
+				hr.hr-mobile
+		hr
+		.row
+			.col-md-6
+				ul.general-list
+					li Это редкая возможность увидеть самого Василия Попова в действии
+				.hr.hr-mobile
+			.col-md-6
+				ul.general-list
+					li Каждый день Мастер будет в прямом эфире разбирать жизненные ситуации одного из участников. 
+				hr.hr-mobile
+		hr
+		.row
+			.col-md-12
+				ul.general-list
+					li Вебинары рассчитаны на людей с первичными представлениями о таро, а также на опытных тарологов, которые хотят расширить свой горизонт понимания этой системы. 
+		hr
+		p.usefull-last-text Возможно именно Вашу проблему Василий Попов разберет в прямом эфире.
+			br
+			| Регистрируйтесь на мастер-класс и узнайте как попасть на разбор к мастеру
+		+b('button-container-center','',href,'Участвовать в мастер-классе')

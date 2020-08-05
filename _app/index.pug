@@ -7,12 +7,23 @@
 -var fav_ico = path+'favicon.ico';
 -var fav_png = path+'favicon.png';
 -var scripts = path+'js/scripts.min.js';
--var action = '';
--var group = '';
--var formId = '';
--var formVc = '';
+-var action = 'https://shop.mv-centr.ru/?r=personal/newsletter/sub/add&id=25863&lg=ru&Contact[id_newsletter]=';
+-var group = '179';
+-var formId = '160';
+-var formVc = '3559088040';
+
 //- -var footer_title = true
 //- -var oferta = 'https://mastervision.su/oferta.docx'
+//- https://shop.mv-centr.ru/index.php?r=form/telegram&id_bot=8
+
+
+-var href = '#Modal';
+
+mixin gt(cl,h3)
+	h3.general-title(class=cl)=h3
+mixin b(cl1,cl2,href,p,target,id)
+	.button-container(class=cl1)
+		a.button.button-up(class=cl2 href=href target=target id=id)=p
 
 <!DOCTYPE html>
 html(lang="ru")
@@ -29,8 +40,8 @@ html(lang="ru")
 		include pug/main/6.author.pug
 		include pug/main/7.revs.pug
 		include pug/main/8.last.pug
-		include pug/base/2.footer.pug
+		include pug/base/2-footer.pug
 		include pug/main/9.modal.pug
-		include pug/base/3.scripts.pug
+		include pug/base/3-scripts.pug
 		//- include pug/scripts/chat
 		include pug/scripts/body_bottom_scripts
