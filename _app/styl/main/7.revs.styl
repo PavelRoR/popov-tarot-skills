@@ -2,7 +2,7 @@
 	padding 90px 0
 .general-img-revs
 	top 80px
-	left -340px
+	left -260px
 .general-title-revs
 	margin-top: 90px
 .revs-text-link
@@ -26,11 +26,13 @@
 	offset-position: center
 .revs
 	.slick-arrow
-		bottom: -35px
+		bottom: -65px
 .video-wrapper-rev
 	transform: scale(.9)
 	transform: all .3s ease
 	padding 20px
+	border-radius: 20px;
+	overflow hidden
 	&:after
 		content none
 	iframe
@@ -49,7 +51,10 @@
 		transform: all .3s ease
 		&:hover
 			color cB
+.slick-next, .slick-prev
+	width 34px
+	height 40px
 .slick-prev
-	left calc(50% - 30px)
+	left calc(50% - 40px)
 .slick-next
-	right calc(50% - 30px)
+	right calc(50% - 40px)
