@@ -1,0 +1,27 @@
+-var path = '../';
+-var head_url = 'https://popov.mastervision.su/tarot-skills/remind/';
+-var head_title = 'Вы зарегистрированы на мастер-класс «Исскуство Таро»';
+-var head_description = 'Не пропустите вебинар, спланируйте свои дела так, чтобы ничего вас не отвлекало';
+-var styles = path+'css/bonus.min.css';
+-var fav_ico = path+'favicon.ico';
+-var fav_png = path+'favicon.png';
+-var footer_title = true
+//- -var oferta = 'https://mastervision.su/oferta.docx'
+
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		include pug/head
+		include pug/scripts/head_scripts
+	body
+		include pug/scripts/body_top_scripts
+		section#main.remind
+			.container
+				include pug/base/1-header.pug
+				h1.main-title.main-title-remind Вы зарегистрированы на мастер-класс
+					br
+					a(href="https://popov.mastervision.su/tarot-skills/" target="_blank") «Искусство Таро»
+				h2.main-subtitle.main-subtitle-remind Не пропустите вебинар, спланируйте свои дела так, чтобы ничего вас не отвлекало
+				img.main-img-2(src=path+"img/icons/wheel.png", alt="Карта с королем")
+		include pug/base/2-footer.pug
+		include pug/scripts/body_bottom_scripts

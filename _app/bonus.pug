@@ -1,0 +1,32 @@
+-var path = '../';
+-var head_url = 'https://popov.mastervision.su/tarot-skills/bonus/';
+-var head_title = 'Скачайте рабочие тетради. Они помогут Вам лучше подготовиться к предстоящему мастер-классу';
+-var styles = path+'css/bonus.min.css';
+-var fav_ico = path+'favicon.ico';
+-var fav_png = path+'favicon.png';
+
+-var footer_title = true
+//- -var oferta = 'https://mastervision.su/oferta.docx'
+
+mixin b(cl1,cl2,href,p,target,id)
+	.button-container(class=cl1)
+		a.button.button-up(class=cl2 href=href target=target id=id)=p
+
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		include pug/head
+		include pug/scripts/head_scripts
+	body
+		include pug/scripts/body_top_scripts
+		section#main
+			.container
+				include pug/base/1-header
+				h1.main-title Скачайте рабочие тетради по ссылке ниже
+					br
+					| Они помогут Вам лучше подготовиться к предстоящему мастер-классу
+				img.main-img-1(src=path+"img/icons/day-2.png", alt="Весы")
+				+b('','','https://drive.google.com/drive/folders/17EVhFyvcyc1BUHaUMUjf4FolvTm_Ct38?usp=sharing','Скачать тетради')
+				img.main-img-2(src=path+"img/icons/wheel.png", alt="Карта с королем")
+		include pug/base/2-footer.pug
+		include pug/scripts/body_bottom_scripts
