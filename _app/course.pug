@@ -1,0 +1,42 @@
+-var path = '../';
+-var head_url = 'https://popov.mastervision.su/tarot-skills/course/';
+-var head_title = '«Искусство Таро»';
+-var head_description = 'Обучающий курс Василия Попова';
+-var styles = path+'css/course.min.css';
+-var fav_ico = path+'favicon.ico';
+-var fav_png = path+'favicon.png';
+-var scripts = path+'js/course.min.js';
+
+-var footer_title = true
+-var oferta = 'https://mastervision.su/oferta.docx'
+
+
+-var href = '#prices';
+
+mixin gt(cl,h3)
+	h3.general-title(class=cl)=h3
+mixin b(cl1,cl2,href,p,target,id)
+	.button-container(class=cl1)
+		a.button.button-up(class=cl2 href=href target=target id=id)=p
+
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		include pug/head
+		include pug/scripts/head_scripts
+	body
+		include pug/scripts/body_top_scripts
+		include pug/course/1.main.pug
+		include pug/course/2.about.pug
+		include pug/course/3.for.pug
+		include pug/course/4.plan.pug
+		include pug/course/5.lets.pug
+		include pug/course/6.prices.pug
+		include pug/main/6.author.pug
+		include pug/main/7.revs.pug
+		include pug/course/7.last.pug
+		include pug/base/2-footer.pug
+		include pug/course/8.modals.pug
+		include pug/base/3-scripts.pug
+		//- include pug/scripts/chat
+		include pug/scripts/body_bottom_scripts
