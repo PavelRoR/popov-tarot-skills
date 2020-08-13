@@ -1,3 +1,4 @@
+<?php require_once('vars.php');?>
 <!DOCTYPE html>
 <html lang="ru">
   <head>
@@ -471,10 +472,15 @@
                 </ul>
               </div>
               <div class="packet-footer">
-                <div class="cost cost-full">Стоимость:<span>14 400р.</span></div>
-                <div class="cost cost-sale">Скидка:<span id="sale-1">1 500р.</span></div>
-                <div class="cost cost-today">Стоимость сегодня:<span id="today-1">12 900р.</span></div>
-                <div class="button-container"><a class="button button-up" href="https://shop.mv-centr.ru/?r=ordering/cart/as1&amp;id=269&amp;clean=true&amp;lg=ru" target="_blank" id="link-1">Выбрать</a></div>
+              <?php if($now<$dates[2]){;?>
+                <p class="cost cost-full">Стоимость:<span><?=$full1;?></span></p>
+                <p class="cost cost-sale">Скидка:<span id="sale-1"><?=$sale1;?></span></p>
+                <p class="cost cost-today">Стоимость сегодня:<span id="today-1"><?=$today1;?></span></p>
+                <div class="button-container"><a class="button button-up" href="<?=$link1;?>" target="_blank" id="link-1">Выбрать</a></div>
+                <? } else {;?>
+                  <p class="cost cost-full">Стоимость:<span class="unbroken"><?=$full1;?></span></p>
+                  <div class="button-container"><a class="button button-up" href="<?=$link1;?>" target="_blank">Выбрать</a></div>
+                <?php };?>
               </div>
             </div>
           </div>
@@ -492,10 +498,15 @@
                 </ul>
               </div>
               <div class="packet-footer">
-                <div class="cost cost-full">Стоимость:<span>26 900р.</span></div>
-                <div class="cost cost-sale">Скидка:<span id="sale-2">3 000р.</span></div>
-                <div class="cost cost-today">Стоимость сегодня:<span id="today-2">23 900р.</span></div>
-                <div class="button-container"><a class="button button-up" href="https://shop.mv-centr.ru/?r=ordering/cart/as1&amp;id=270&amp;clean=true&amp;lg=ru" target="_blank" id="link-2">Выбрать</a></div>
+              <?php if($now<$dates[2]){;?>
+                <p class="cost cost-full">Стоимость:<span><?=$full2;?></span></p>
+                <p class="cost cost-sale">Скидка:<span id="sale-2"><?=$sale2;?></span></p>
+                <p class="cost cost-today">Стоимость сегодня:<span id="today-2"><?=$today2;?></span></p>
+                <div class="button-container"><a class="button button-up" href="<?=$link2;?>" target="_blank" id="link-2">Выбрать</a></div>
+                <? } else {;?>
+                  <p class="cost cost-full">Стоимость:<span class="unbroken"><?=$full2;?></span></p>
+                  <div class="button-container"><a class="button button-up" href="<?=$link2;?>" target="_blank">Выбрать</a></div>
+                <?php };?>
               </div>
             </div>
           </div>
@@ -515,22 +526,30 @@
                 </ul>
               </div>
               <div class="packet-footer">
-                <div class="cost cost-full">Стоимость:<span>40 900р.</span></div>
-                <div class="cost cost-sale">Скидка:<span id="sale-3">6 000р.</span></div>
-                <div class="cost cost-today">Стоимость сегодня:<span id="today-3">34 900р.</span></div>
-                <div class="button-container"><a class="button button-up" href="https://shop.mv-centr.ru/?r=ordering/cart/as1&amp;id=271&amp;clean=true&amp;lg=ru" target="_blank" id="link-3">Выбрать</a></div>
+              <?php if($now<$dates[2]){;?>
+                <p class="cost cost-full">Стоимость:<span><?=$full3;?></span></p>
+                <p class="cost cost-sale">Скидка:<span id="sale-3"><?=$sale3;?></span></p>
+                <p class="cost cost-today">Стоимость сегодня:<span id="today-3"><?=$today3;?></span></p>
+                <div class="button-container"><a class="button button-up" href="<?=$link3;?>" target="_blank" id="link-3">Выбрать</a></div>
+                <? } else {;?>
+                <p class="cost cost-full">Стоимость:<span class="unbroken"><?=$full3;?></span></p>
+                <div class="button-container"><a class="button button-up" href="<?=$link3;?>" target="_blank">Выбрать</a></div>
+                <?php };?>
               </div>
             </div>
           </div>
         </div>
+        <?php if($now<$dates[2]):?>
         <div class="prepayment">
           <h4 class="prepayment-title">Акция!!!</h4>
           <p class="prepayment-text">Платите 1 000р., бонусом получаете <span id="prepayment-bonus">1 000р. </span><br/>На счет зачисляется <span id="prepayment-credited">2 000р.</span></p>
-          <div class="button-container"><a class="button button-up" href="https://shop.mv-centr.ru/?r=ordering/cart/as1&amp;id=273&amp;clean=true&amp;lg=ru" target="_blank" id="prepayment-link">Оплатить 1 000р.</a></div>
+          <div class="button-container"><a class="button button-up" href="<?=$prepLink;?>" target="_blank" id="prepayment-link">Оплатить 1 000р.</a></div>
         </div>
-        <div class="timer">
+        <div class="timer hide">
           <h4 class="timer-title">Скидка уменьшится через:</h4>
           <div class="clock"></div>
+        </div>
+        <?php endif;?>
         </div>
       </div>
     </section>

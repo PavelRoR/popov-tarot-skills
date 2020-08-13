@@ -35,9 +35,9 @@ $(document).ready(function () {
     $(function () {
         var clock;
         var dates = new Array(
-            new Date("August 14, 2020 13:52 UTC+3"),
-            new Date("August 15, 2020 13:53 UTC+3"),
-            new Date("August 16, 2020 13:54 UTC+3")
+            new Date("August 25, 2020 00:00 UTC+3"),
+            new Date("August 26, 2020 00:00 UTC+3"),
+            new Date("August 27, 2020 00:00 UTC+3")
         );
 
         var currentDate = new Date();
@@ -56,31 +56,31 @@ $(document).ready(function () {
         };
         var today1 = {
             name: $('#today-1'),
-            todayText: new Array('14 400р.', '14 900р.')
+            todayText: new Array('13 400р.', '13 900р.')
         };
         var today2 = {
             name: $('#today-2'),
-            todayText: new Array('29 900р.', '30 900р.')
+            todayText: new Array('24 900р.', '25 900р.')
         };
         var today3 = {
             name: $('#today-3'),
-            todayText: new Array('49 900р.', '51 900р.')
+            todayText: new Array('36 900р.', '38 900р.')
         };
         var link1 = {
             name: $('#link-1'),
-            linkText: new Array('https://shop.mastervision.su/?r=ordering/cart/as1&id=5227&clean=true&lg=ru', 'https://shop.mastervision.su/?r=ordering/cart/as1&id=5228&clean=true&lg=ru', 'https://shop.mastervision.su/?r=ordering/cart/as1&id=5229&clean=true&lg=ru')
+            linkText: new Array('https://shop.mv-centr.ru/?r=ordering/cart/as1&id=278&clean=true&lg=ru', 'https://shop.mv-centr.ru/?r=ordering/cart/as1&id=279&clean=true&lg=ru', 'https://shop.mv-centr.ru/?r=ordering/cart/as1&id=280&clean=true&lg=ru')
         };
         var link2 = {
             name: $('#link-2'),
-            linkText: new Array('https://shop.mastervision.su/?r=ordering/cart/as1&id=5231&clean=true&lg=ru', 'https://shop.mastervision.su/?r=ordering/cart/as1&id=5232&clean=true&lg=ru', 'https://shop.mastervision.su/?r=ordering/cart/as1&id=5233&clean=true&lg=ru')
+            linkText: new Array('https://shop.mv-centr.ru/?r=ordering/cart/as1&id=281&clean=true&lg=ru', 'https://shop.mv-centr.ru/?r=ordering/cart/as1&id=282&clean=true&lg=ru', 'https://shop.mv-centr.ru/?r=ordering/cart/as1&id=283&clean=true&lg=ru')
         };
         var link3 = {
             name: $('#link-3'),
-            linkText: new Array('https://shop.mastervision.su/?r=ordering/cart/as1&id=5235&clean=true&lg=ru', 'https://shop.mastervision.su/?r=ordering/cart/as1&id=5236&clean=true&lg=ru', 'https://shop.mastervision.su/?r=ordering/cart/as1&id=5237&clean=true&lg=ru')
+            linkText: new Array('https://shop.mv-centr.ru/?r=ordering/cart/as1&id=284&clean=true&lg=ru', 'https://shop.mv-centr.ru/?r=ordering/cart/as1&id=285&clean=true&lg=ru', 'https://shop.mv-centr.ru/?r=ordering/cart/as1&id=286&clean=true&lg=ru')
         };
         var prep_link = {
             name: $('#prepayment-link'),
-            linkText: new Array('https://shop.mastervision.su/?r=ordering/cart/as1&id=5241&clean=true&lg=ru', 'https://shop.mastervision.su/?r=ordering/cart/as1&id=5242&clean=true&lg=ru')
+            linkText: new Array('https://shop.mv-centr.ru/?r=ordering/cart/as1&id=275&clean=true&lg=ru', 'https://shop.mv-centr.ru/?r=ordering/cart/as1&id=276&clean=true&lg=ru')
         }
         if (currentDate < dates[0]) {
             var futureDate = dates[0];
